@@ -1,5 +1,7 @@
 out/
 classes/
+.idea/
+.classpath
 
 *.iml
 *.log
