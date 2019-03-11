@@ -1,49 +1,49 @@
 package com.cafe;
 
-//??ÀÚ¹ÙÆÄÀÏ¿¡ 1°³ÀÇ public class°¡ ÇÑ°³ÀÎ ÀÌÀ¯?
+//??ìë°”íŒŒì¼ì— 1ê°œì˜ public classê°€ í•œê°œì¸ ì´ìœ ?
 public class Barista {
 
 	public static void main(String[] args) {
-		//¸ŞÀÎ¸Ş¼Òµå·Î¼­ ¿©±â¼­ ¹Ù¸®½ºÅ¸°¡ ÇÏ´Â ÀÏÀÌ ÀÏ¾î³²
-		//0. ¹Ù¸®½ºÅ¸°¡ ÀÔ»çÇß´Ù.
+		//ë©”ì¸ë©”ì†Œë“œë¡œì„œ ì—¬ê¸°ì„œ ë°”ë¦¬ìŠ¤íƒ€ê°€ í•˜ëŠ” ì¼ì´ ì¼ì–´ë‚¨
+		//0. ë°”ë¦¬ìŠ¤íƒ€ê°€ ì…ì‚¬í–ˆë‹¤.
 		Barista barista1 = new Barista();
 		
-		//1. ÁÖ¹®À» ¹Ş´Â´Ù
+		//1. ì£¼ë¬¸ì„ ë°›ëŠ”ë‹¤
 		Order order = new Order();
 		order = order.getOrder();
 		
-		//2. Ä¿ÇÇ ÁÖ¹®À» ³Ö¾î¼­ ÁÖ¹® °¹¼ö¸¦ È®ÀÎÇÑ´Ù	
+		//2. ì»¤í”¼ ì£¼ë¬¸ì„ ë„£ì–´ì„œ ì£¼ë¬¸ ê°¯ìˆ˜ë¥¼ í™•ì¸í•œë‹¤	
 		Coffee coffee = new Coffee();
 		Object[] coffeeTray = new Object[order.getOrderCnt()];
 		
-		//°í°´ÀÌ ÁÖ¹®ÇÑ ¼ö¸¸Å­ Ä¿ÇÇ¸¦ ¸¸µç´Ù
+		//ê³ ê°ì´ ì£¼ë¬¸í•œ ìˆ˜ë§Œí¼ ì»¤í”¼ë¥¼ ë§Œë“ ë‹¤
 		for(int i = 0; i < order.getOrderCnt(); i++) {
 			if("1".equals(order.getMenu())) {
 				coffee = coffee.makeAmericano(order);
 			}else if("2".equals(order.getMenu())){
 				coffee = coffee.makeLatte(order);
 			}else {
-				coffee = coffee.makeAmericano(4, "¶ß°Ì°Ô", "togo", "hot");
+				coffee = coffee.makeAmericano(4, "ëœ¨ê²ê²Œ", "togo", "hot");
 			}
 			coffeeTray[i] = coffee;
 		}
 		
-		//?? µÑÀÇ Â÷ÀÌÁ¡Àº?
-		//int orderCnt = coffee.makeAmericano(3, "¶ß°Ì°Ô", "toGo", "ice");
+		//?? ë‘˜ì˜ ì°¨ì´ì ì€?
+		//int orderCnt = coffee.makeAmericano(3, "ëœ¨ê²ê²Œ", "toGo", "ice");
 		//int orderCnt = coffee.makeAmericano(order);
 		
-		//3. °í°´¿¡°Ô Ä¿ÇÇ¸¦ °Ç³½´Ù
+		//3. ê³ ê°ì—ê²Œ ì»¤í”¼ë¥¼ ê±´ë‚¸ë‹¤
 		barista1.serveCoffeeToCusomer(coffeeTray);		
 	}
 	
 	public void serveCoffeeToCusomer(Object[] coffeeTray) {
 		Coffee coffee = new Coffee();
-		System.out.println("ÁÖ¹®ÇÏ½Å À½·á ");
+		System.out.println("ì£¼ë¬¸í•˜ì‹  ìŒë£Œ ");
 		for(int i = 0; i < coffeeTray.length; i++) {
 			coffee = (Coffee)coffeeTray[i];
-			System.out.println("1".equals(coffee.getMenu()) ? "¾Æ¸Ş¸®Ä«³ë" : "¶ó¶¼");
+			System.out.println("1".equals(coffee.getMenu()) ? "ì•„ë©”ë¦¬ì¹´ë…¸" : "ë¼ë–¼");
 		}
-		System.out.println(coffeeTray.length + "ÀÜ ³ª¿Ô½À´Ï´Ù.");
+		System.out.println(coffeeTray.length + "ì” ë‚˜ì™”ìŠµë‹ˆë‹¤.");
 	}
 	
 

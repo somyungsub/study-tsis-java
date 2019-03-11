@@ -3,12 +3,12 @@ package com.biz;
 import com.entity.Art;
 
 public interface IReservationBiz {
-	//¿¹¸Å ·ÎÁ÷ ±¸Çö ¸Ş¼Òµå¸¦ ¼±¾ğÇÑ interface
+	//ì˜ˆë§¤ ë¡œì§ êµ¬í˜„ ë©”ì†Œë“œë¥¼ ì„ ì–¸í•œ interface
 
 	public void addReservation(Art art);
 	public void printReservation();
 	
 	/**
-	 * ??ÀÎÅÍÆäÀÌ½º¸¦ »ı¼ºÇÏ°í Ãß»ó¸Ş¼Òµå¸¦ ±¸ÇöÇÏ¿© »ç¿ëÇÏ´Â ÀÌÀ¯?
+	 * ??ì¸í„°í˜ì´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ì¶”ìƒë©”ì†Œë“œë¥¼ êµ¬í˜„í•˜ì—¬ ì‚¬ìš©í•˜ëŠ” ì´ìœ ?
 	 */
 }

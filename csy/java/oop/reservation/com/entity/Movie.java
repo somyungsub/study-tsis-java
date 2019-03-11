@@ -1,30 +1,30 @@
 package com.entity;
 
 public class Movie extends Art{
-	//Art Å¬·¡½º´Â ±âº» »ý¼ºÀÚ¸¦ °®°íÀÖÁö ¾Ê±â ¶§¹®¿¡
-	//±âº»»ý¼ºÀÚ¸¦ °®Áö¾ÊÀº Å¬·¡½º¸¦ »ó¼Ó¹ÞÀ» ¶§´Â 
-	//super Å¬·¡½ºÀÇ »ý¼ºÀÚ¸¦ È£ÃâÇØ¾ßÇÑ´Ù.
+	//Art í´ëž˜ìŠ¤ëŠ” ê¸°ë³¸ ìƒì„±ìžë¥¼ ê°–ê³ ìžˆì§€ ì•Šê¸° ë•Œë¬¸ì—
+	//ê¸°ë³¸ìƒì„±ìžë¥¼ ê°–ì§€ì•Šì€ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì„ ë•ŒëŠ” 
+	//super í´ëž˜ìŠ¤ì˜ ìƒì„±ìžë¥¼ í˜¸ì¶œí•´ì•¼í•œë‹¤.
 	
 	
-	//3.°¡°ÝÀ» ÀúÀåÇÏ´Â »ó¼ö°ªÀ» ¼³Á¤ÇÑ´Ù.
+	//3.ê°€ê²©ì„ ì €ìž¥í•˜ëŠ” ìƒìˆ˜ê°’ì„ ì„¤ì •í•œë‹¤.
 	public static int Price = 50;	
 	
-	//2.ArtÅ¬·¡½º¸¦ »ó¼Ó¹Þ°í, ¿¹¸Å¼ö¸¦ ÀúÀå °¡´ÉÇÑ »ý¼ºÀÚ¸¦ Ãß°¡ÇÑ´Ù
-	// - »ý¼ºÀÚ¿¡¼­´Â »óÀ§ Å¬·¡½ºÀÇ »ý¼ºÀÚ¸¦ È£ÃâÇÑ´Ù.
+	//2.Artí´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ê³ , ì˜ˆë§¤ìˆ˜ë¥¼ ì €ìž¥ ê°€ëŠ¥í•œ ìƒì„±ìžë¥¼ ì¶”ê°€í•œë‹¤
+	// - ìƒì„±ìžì—ì„œëŠ” ìƒìœ„ í´ëž˜ìŠ¤ì˜ ìƒì„±ìžë¥¼ í˜¸ì¶œí•œë‹¤.
 	public Movie(int reservationNum) {
 		super(Price, reservationNum);
 	}
 
-	//toString() ¸Þ¼Òµå¸¦ ¿À¹ö¶óÀÌµùÇÏ¿© ¿¹¸ÅÀÌ¸§°ú ¿¹¸Å¼ö¸¦ ¸®ÅÏÇÑ´Ù 
-	//??ÀÌ°Ç ¿À¹ö¶óÀÌµùÀÌ ¾Æ´Ï¶ó ¿À¹ö·Îµù ¾Æ´ÑÁö?
+	//toString() ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•˜ì—¬ ì˜ˆë§¤ì´ë¦„ê³¼ ì˜ˆë§¤ìˆ˜ë¥¼ ë¦¬í„´í•œë‹¤ 
+	//??ì´ê±´ ì˜¤ë²„ë¼ì´ë”©ì´ ì•„ë‹ˆë¼ ì˜¤ë²„ë¡œë”© ì•„ë‹Œì§€?
 	@Override
 	public String toString() {
-		return  "¿µÈ­ (°¡°Ý : " + Price + "), " + super.getReservationNum() + "¿¹¸Å¸¦ Àå ÇÕ´Ï´Ù.";
+		return  "ì˜í™” (ê°€ê²© : " + Price + "), " + super.getReservationNum() + "ì˜ˆë§¤ë¥¼ ìž¥ í•©ë‹ˆë‹¤.";
 	}
 
 	/**
-	 * ¿À¹ö¶óÀÌµù : °°Àº ÀÌ¸§ÀÇ ¸Þ¼Òµå¸¦ ¸Å°³º¯¼ö¸¦ ´Þ¸®ÇÏ¿© »ç¿ëÇÏ´Â°Í(´ÙÇü¼º Á¾·ù)
-	 * ¿À¹ö·Îµù : »óÀ§Å¬·¡½º°¡ °¡Áø ¸Þ¼Òµå¸¦ ÇÏÀ§Å¬·¡½º¿¡¼­ ÀçÁ¤ÀÇÇÏ¿© »ç¿ë(´ÙÇü¼º Á¾·ù)
+	 * ì˜¤ë²„ë¼ì´ë”© : ê°™ì€ ì´ë¦„ì˜ ë©”ì†Œë“œë¥¼ ë§¤ê°œë³€ìˆ˜ë¥¼ ë‹¬ë¦¬í•˜ì—¬ ì‚¬ìš©í•˜ëŠ”ê²ƒ(ë‹¤í˜•ì„± ì¢…ë¥˜)
+	 * ì˜¤ë²„ë¡œë”© : ìƒìœ„í´ëž˜ìŠ¤ê°€ ê°€ì§„ ë©”ì†Œë“œë¥¼ í•˜ìœ„í´ëž˜ìŠ¤ì—ì„œ ìž¬ì •ì˜í•˜ì—¬ ì‚¬ìš©(ë‹¤í˜•ì„± ì¢…ë¥˜)
 	 */
 	
 

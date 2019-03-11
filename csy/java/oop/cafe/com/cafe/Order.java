@@ -48,20 +48,20 @@ class Order {
 	
 	public Order getOrder() {
 		Order order = new Order();
-		//°í°´¿¡°Ô ÁÖ¹®À» ¹Ş´Â´Ù
+		//ê³ ê°ì—ê²Œ ì£¼ë¬¸ì„ ë°›ëŠ”ë‹¤
 		Scanner sc = new Scanner(System.in);
-		System.out.println("ÁÖ¹®ÇØÁÖ¼¼¿ä.");
-		System.out.println("¸îÀÜ?");
+		System.out.println("ì£¼ë¬¸í•´ì£¼ì„¸ìš”.");
+		System.out.println("ëª‡ì”?");
 		order.setOrderCnt(sc.nextInt()); 
-		//??ÀÚ²Ù Áú¹®ÀÌ ¹Ù·Î Ãâ·Â µÇ¾î¹ö¸² ¿Ö Áß°£¿¡ ³Ö¾î¾ß ÇÏ´ÂÁö?
+		//??ìê¾¸ ì§ˆë¬¸ì´ ë°”ë¡œ ì¶œë ¥ ë˜ì–´ë²„ë¦¼ ì™œ ì¤‘ê°„ì— ë„£ì–´ì•¼ í•˜ëŠ”ì§€?
 		sc.nextLine();
-		System.out.println("Â÷°©°Ô?¶ß°Ì°Ô?");
+		System.out.println("ì°¨ê°‘ê²Œ?ëœ¨ê²ê²Œ?");
 		order.setTemp(sc.nextLine()); 
-		System.out.println("¼¦Àº ¸î°³? ±âº»Àº 2¼¦ ÀÔ´Ï´Ù.");
+		System.out.println("ìƒ·ì€ ëª‡ê°œ? ê¸°ë³¸ì€ 2ìƒ· ì…ë‹ˆë‹¤.");
 		order.setTemp(sc.nextLine()); 
 		System.out.println("hot?ice?");
 		order.setHotOrIce(sc.nextLine()); 
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		System.out.println("1: americano");
 		System.out.println("2: latte");
 		System.out.println("3: chocolate");

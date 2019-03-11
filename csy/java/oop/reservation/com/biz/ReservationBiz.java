@@ -4,17 +4,17 @@ import com.entity.Art;
 import com.entity.Movie;
 
 public class ReservationBiz implements IReservationBiz{
-	//IReservationBiz¸¦ »ó¼Ó¹Þ´Â Å¬·¡½º
-	//¿¹¸Å ·ÎÁ÷À» ±¸ÇöÇÏ°í ¿¹¸ÅÁ¤º¸¸¦ Ãâ·ÂÇÏ´Â Å¬·¡½º
+	//IReservationBizë¥¼ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤
+	//ì˜ˆë§¤ ë¡œì§ì„ êµ¬í˜„í•˜ê³  ì˜ˆë§¤ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í´ëž˜ìŠ¤
 	
 	
-	//2.Å¬·¡½º ´ÙÀÌ¾î±×·¥À» ÂüÁ¶ÇÏ¿© ¸â¹öº¯¼ö Á¤ÀÇ
+	//2.í´ëž˜ìŠ¤ ë‹¤ì´ì–´ê·¸ëž¨ì„ ì°¸ì¡°í•˜ì—¬ ë©¤ë²„ë³€ìˆ˜ ì •ì˜
 	/**
-	 * Å¬·¡½º ´ÙÀÌ¾î±×·¥ _ Å¬·¡½º Ç¥±â¹ý
-	 * º¯¼ö
+	 * í´ëž˜ìŠ¤ ë‹¤ì´ì–´ê·¸ëž¨ _ í´ëž˜ìŠ¤ í‘œê¸°ë²•
+	 * ë³€ìˆ˜
 	 * + : public
 	 * - : private
-	 * ¹ØÁÙ : static
+	 * ë°‘ì¤„ : static
 	 */
 	
 	private int money;
@@ -23,37 +23,37 @@ public class ReservationBiz implements IReservationBiz{
 	
 	
 	/**
-	 * »ý¼ºÀÚ
+	 * ìƒì„±ìž
 	 */	
-	//3. ÃÊ±â°ª ±Ý¾×À» ¼³Á¤ÇÏ±âÀ§ÇÑ »ýÁ¤ÀÚ¸¦ ÀÛ¼ºÇÑ´Ù
+	//3. ì´ˆê¸°ê°’ ê¸ˆì•¡ì„ ì„¤ì •í•˜ê¸°ìœ„í•œ ìƒì •ìžë¥¼ ìž‘ì„±í•œë‹¤
 	public ReservationBiz(int money) {
 		this.money = money;
 	}
 
 	/**
-	 * ¿À¹ö¶óÀÌµù : °°Àº ÀÌ¸§ÀÇ ¸Þ¼Òµå¸¦ ¸Å°³º¯¼ö¸¦ ´Þ¸®ÇÏ¿© »ç¿ëÇÏ´Â°Í(´ÙÇü¼º Á¾·ù)
-	 * ¿À¹ö·Îµù : »óÀ§Å¬·¡½º°¡ °¡Áø ¸Þ¼Òµå¸¦ ÇÏÀ§Å¬·¡½º¿¡¼­ ÀçÁ¤ÀÇÇÏ¿© »ç¿ë(´ÙÇü¼º Á¾·ù)
+	 * ì˜¤ë²„ë¼ì´ë”© : ê°™ì€ ì´ë¦„ì˜ ë©”ì†Œë“œë¥¼ ë§¤ê°œë³€ìˆ˜ë¥¼ ë‹¬ë¦¬í•˜ì—¬ ì‚¬ìš©í•˜ëŠ”ê²ƒ(ë‹¤í˜•ì„± ì¢…ë¥˜)
+	 * ì˜¤ë²„ë¡œë”© : ìƒìœ„í´ëž˜ìŠ¤ê°€ ê°€ì§„ ë©”ì†Œë“œë¥¼ í•˜ìœ„í´ëž˜ìŠ¤ì—ì„œ ìž¬ì •ì˜í•˜ì—¬ ì‚¬ìš©(ë‹¤í˜•ì„± ì¢…ë¥˜)
 	 */
 	
 	@Override
 	public void addReservation(Art art) {
-		//1. ÇöÀç ÀÜ¾×À» Ãâ·ÂÇÑ´Ù.
-		System.out.println("ÇöÀç±Ý¾× : " + this.money);
+		//1. í˜„ìž¬ ìž”ì•¡ì„ ì¶œë ¥í•œë‹¤.
+		System.out.println("í˜„ìž¬ê¸ˆì•¡ : " + this.money);
 		
-		//2.¸Å°³º¯¼ö·Î ³Ñ°Ü¹ÞÀº ArtÅ¸ÀÔ¿¡ ´ëÇÑ ¸Þ½ÃÁö¸¦ Ãâ·ÂÇÑ´Ù.
-		//¸Þ½ÃÁö Ãâ·Â½Ã ArtÂ÷ÀÔÀÇ toString()»ç¿ëÇÑ´Ù.
+		//2.ë§¤ê°œë³€ìˆ˜ë¡œ ë„˜ê²¨ë°›ì€ Artíƒ€ìž…ì— ëŒ€í•œ ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•œë‹¤.
+		//ë©”ì‹œì§€ ì¶œë ¥ì‹œ Artì°¨ìž…ì˜ toString()ì‚¬ìš©í•œë‹¤.
 		System.out.println(art.toString());
 		
-		//3.ÀÜ¾×°ú ¿¹¸Å°¡°ÝÀ» ºñ±³ÇÏ¿© ºÎÁ·ÇÑ °æ¿ì¿¡ ¿¡·¯¸Þ½ÃÁö¸¦ Ãâ·ÂÇÑ´Ù.
+		//3.ìž”ì•¡ê³¼ ì˜ˆë§¤ê°€ê²©ì„ ë¹„êµí•˜ì—¬ ë¶€ì¡±í•œ ê²½ìš°ì— ì—ëŸ¬ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•œë‹¤.
 		if(this.money < art.getPrice()) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¿¹¸Å¸¦ Ãë¼ÒÇÕ´Ï´Ù.");
+			System.out.println("ìž”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ì˜ˆë§¤ë¥¼ ì·¨ì†Œí•©ë‹ˆë‹¤.");
 		}
-		//4.ÇöÀç °®°íÀÖ´Â ÀÜ¾×¿¡¼­ ¿¹¸Å °¡°Ý¸¸Å­ »«´Ù
+		//4.í˜„ìž¬ ê°–ê³ ìžˆëŠ” ìž”ì•¡ì—ì„œ ì˜ˆë§¤ ê°€ê²©ë§Œí¼ ëº€ë‹¤
 		this.money = this.money - art.getPrice();
 		
-		//5. ¹è¿­¿¡ ÀúÀåµÈ °³¼ö¿Í ¹è¿­ÀÇ Å©±â°¡ °°À¸¸é, ±âÁ¸ÀÇ ¹è¿­º¸´Ù »çÀÌÁî°¡ 3¹èÀÎ ¹è¿­À» »ý¼ºÇÑ ÈÄ, ±âÁ¸ÀÇ ¹è¿­ ³»¿ëÀ» »õ·Î¿î ¹è¿­¿¡ º¹»çÇÏ°í »õ·Î¿î ¹è¿­°ú ±âÁ¸ ¹è¿­À» ¹Ù²Û´Ù
+		//5. ë°°ì—´ì— ì €ìž¥ëœ ê°œìˆ˜ì™€ ë°°ì—´ì˜ í¬ê¸°ê°€ ê°™ìœ¼ë©´, ê¸°ì¡´ì˜ ë°°ì—´ë³´ë‹¤ ì‚¬ì´ì¦ˆê°€ 3ë°°ì¸ ë°°ì—´ì„ ìƒì„±í•œ í›„, ê¸°ì¡´ì˜ ë°°ì—´ ë‚´ìš©ì„ ìƒˆë¡œìš´ ë°°ì—´ì— ë³µì‚¬í•˜ê³  ìƒˆë¡œìš´ ë°°ì—´ê³¼ ê¸°ì¡´ ë°°ì—´ì„ ë°”ê¾¼ë‹¤
 		
-		//6. ¹è¿­¿¡ ¿¹¸ÅÇÑ °³¼ö¸¸Å­ ÀúÀåÇÏ°í count °ª Áõ°¡ ½ÃÅ²´Ù
+		//6. ë°°ì—´ì— ì˜ˆë§¤í•œ ê°œìˆ˜ë§Œí¼ ì €ìž¥í•˜ê³  count ê°’ ì¦ê°€ ì‹œí‚¨ë‹¤
 		
 	}
 
@@ -61,15 +61,15 @@ public class ReservationBiz implements IReservationBiz{
 	public void printReservation() {
 		int totalPrice = 0;
 		for(int i=0; i < art.length; i++) {
-			//1.¹è¿­¿¡ ÀúÀåµÈ ¿¹¸Å¼ö¸¦ count ÇÑ´Ù
+			//1.ë°°ì—´ì— ì €ìž¥ëœ ì˜ˆë§¤ìˆ˜ë¥¼ count í•œë‹¤
 			count = art[i].getReservationNum();
 
-			//2.¹è¿­¿¡ ÀúÀåµÈ ÃÑ ¿¹¸Åºñ¿ëÀ» °è»êÇÑ´Ù
+			//2.ë°°ì—´ì— ì €ìž¥ëœ ì´ ì˜ˆë§¤ë¹„ìš©ì„ ê³„ì‚°í•œë‹¤
 			totalPrice = art[i].getPrice();
 		}
-		//3. ¿¹¸Å ¸ñ·Ï°ú ³²Àº ÀÜ¾×À» Ãâ·ÂÇÑ´Ù
-		System.out.println("ÀüÃ¼ ¿¹¸Å±Ý¾× : " + totalPrice + "¿ø");
-		System.out.println("³²Àº ÀÜ¾×: " +(this.money - totalPrice) + "¿ø");
+		//3. ì˜ˆë§¤ ëª©ë¡ê³¼ ë‚¨ì€ ìž”ì•¡ì„ ì¶œë ¥í•œë‹¤
+		System.out.println("ì „ì²´ ì˜ˆë§¤ê¸ˆì•¡ : " + totalPrice + "ì›");
+		System.out.println("ë‚¨ì€ ìž”ì•¡: " +(this.money - totalPrice) + "ì›");
 	}	
 
 	

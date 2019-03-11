@@ -10,6 +10,6 @@ public class Musical extends Art{
 	
 	@Override
 	public String toString() {
-		return "¹ÂÁöÄÃ(°¡°Ý : )" +  MUSICAL_PRICE+ "Àå ¿¹¸ÅÇÕ´Ï´Ù.";
+		return "ë®¤ì§€ì»¬(ê°€ê²© : )" +  MUSICAL_PRICE+ "ìž¥ ì˜ˆë§¤í•©ë‹ˆë‹¤.";
 	}
 }

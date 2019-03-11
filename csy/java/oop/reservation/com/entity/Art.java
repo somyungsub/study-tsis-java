@@ -1,17 +1,17 @@
 package com.entity;
 
 public class Art {
-	private int price; //°¡°İ
-	private int reservationNum; //¿¡¸Å¼ö
+	private int price; //ê°€ê²©
+	private int reservationNum; //ì—ë§¤ìˆ˜
 	
 	
 	
-	//³»°¡ ¸¸µç »ı¼ºÀÚ
+	//ë‚´ê°€ ë§Œë“  ìƒì„±ì
 	public Art(int price, int reservationNum) {
 		
 	}
 	/**
-	 * ÀÌÅ¬¸³½º ±â´ÉÀ¸·Î ÀÚµ¿»ı¼ºÇÑ »ı¼ºÀÚ
+	 * ì´í´ë¦½ìŠ¤ ê¸°ëŠ¥ìœ¼ë¡œ ìë™ìƒì„±í•œ ìƒì„±ì
 	 * @param price
 	 * @param reservationNum
 	 
@@ -48,7 +48,7 @@ public class Art {
 	
 	
 	/*
-	 * ÀÌ°Ô ÀÖ¾î¾ß Movie.java¿¡¼­ toString ¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµù °¡´ÉÇÑÁö?
+	 * ì´ê²Œ ìˆì–´ì•¼ Movie.javaì—ì„œ toString ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© ê°€ëŠ¥í•œì§€?
 	
 	public String toString(Art art) {
 		// TODO Auto-generated method stub

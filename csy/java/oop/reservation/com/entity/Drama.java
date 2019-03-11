@@ -10,6 +10,6 @@ public class Drama extends Art{
 	
 	@Override
 	public String toString() {
-		return "µå¶ó¸¶(°¡°İ : )" +  DRAMA_PRICE+ "Àå ¿¹¸ÅÇÕ´Ï´Ù.";
+		return "ë“œë¼ë§ˆ(ê°€ê²© : )" +  DRAMA_PRICE+ "ì¥ ì˜ˆë§¤í•©ë‹ˆë‹¤.";
 	}
 }

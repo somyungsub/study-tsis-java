@@ -10,10 +10,10 @@ public class ReservationTest {
 
 	public static void main(String args[]) {
 		
-		//1. ºñÁî´Ï½º ·ÎÁ÷À» Ã³¸®ÇÏ±â À§ÇÏ¿© ReservationBiz °´Ã¼¸¦ »ı¼ºÇÑ´Ù
+		//1. ë¹„ì¦ˆë‹ˆìŠ¤ ë¡œì§ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•˜ì—¬ ReservationBiz ê°ì²´ë¥¼ ìƒì„±í•œë‹¤
 		ReservationBiz rsvBiz = new ReservationBiz(1000);
 		
-		//2.ÇÊ¿äÇÑ ¿¹¸Å¼ö¸¦ ÀÎÀÚ·Î °®´Â ArtÅ¸ÀÔÀÇ °´Ã¼¸¦ »ı¼ºÇÏ¿© ¿¹¸ÅÇÑ´Ù
+		//2.í•„ìš”í•œ ì˜ˆë§¤ìˆ˜ë¥¼ ì¸ìë¡œ ê°–ëŠ” Artíƒ€ì…ì˜ ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì˜ˆë§¤í•œë‹¤
 		Art movie  = new Movie(3);
 		rsvBiz.addReservation(movie);
 		Art musical  = new Musical(2);
@@ -21,7 +21,7 @@ public class ReservationTest {
 		Art drama  = new Drama(1);
 		rsvBiz.addReservation(drama);
 		
-		//3.printReservation()¸Ş¼Òµå¸¦ È£ÃâÇÏ¿© ¿¹¸ÅÁ¤º¸¸¦ Ãâ·ÂÇÑ´Ù.
+		//3.printReservation()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ì˜ˆë§¤ì •ë³´ë¥¼ ì¶œë ¥í•œë‹¤.
 		rsvBiz.printReservation();
 		
 	}

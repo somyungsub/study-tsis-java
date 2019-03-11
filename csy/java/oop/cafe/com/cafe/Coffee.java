@@ -2,14 +2,14 @@ package com.cafe;
 
 
 /**
- * Ä¿ÇÇ Å¬·¡½º
+ * ì»¤í”¼ í´ë˜ìŠ¤
  * @author EX0517
  * 
  *
  */
 class Coffee {
 	
-	static int defaultShotCnt = 2; //Ä¿ÇÇ¿¡ µé¾î°¡´Â ±âº» ¼¦
+	static int defaultShotCnt = 2; //ì»¤í”¼ì— ë“¤ì–´ê°€ëŠ” ê¸°ë³¸ ìƒ·
 	int water = 200;
 	int milk = 200;
 	String cup = "mug"; //default
@@ -18,43 +18,43 @@ class Coffee {
 	
 
 	public Coffee() {
-		//»ı¼ºÀÚ
+		//ìƒì„±ì
 	}
 
 	/**
-	 * ¾Æ¸Ş¸®Ä«³ë ¸¸µå´Â ¸Ş¼Òµå
+	 * ì•„ë©”ë¦¬ì¹´ë…¸ ë§Œë“œëŠ” ë©”ì†Œë“œ
 	 * @param shotCnt
-	 * @return ¸¸µé¾îÁø Ä¿ÇÇ °¹¼ö
+	 * @return ë§Œë“¤ì–´ì§„ ì»¤í”¼ ê°¯ìˆ˜
 	 */
 	public Coffee makeAmericano(int shotCnt, String temp, String toGo, String iceOrHot) {
 		
 		return coffee;
 		
-		//¿¹¿ÜÃ³¸® 
-		//¶ß°Å¿î ¿Âµµ¿Í ice·Î ÁÖ¹®ÇÏ°Å³ª or Â÷°¡¿î¿Âµµ¿Í hotÀ¸·Î ÁÖ¹®ÇÒ °æ¿ì ¿¹¿ÜÃ³¸®
-		//¼Õ´Ô¿¡°Ô ´Ù½Ã ¹°¾îº»´Ù
+		//ì˜ˆì™¸ì²˜ë¦¬ 
+		//ëœ¨ê±°ìš´ ì˜¨ë„ì™€ iceë¡œ ì£¼ë¬¸í•˜ê±°ë‚˜ or ì°¨ê°€ìš´ì˜¨ë„ì™€ hotìœ¼ë¡œ ì£¼ë¬¸í•  ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬
+		//ì†ë‹˜ì—ê²Œ ë‹¤ì‹œ ë¬¼ì–´ë³¸ë‹¤
 	}
 
 	/**
-	 * ¾Æ¸Ş¸®Ä«³ë ¸¸µå´Â ¸Ş¼Òµå
+	 * ì•„ë©”ë¦¬ì¹´ë…¸ ë§Œë“œëŠ” ë©”ì†Œë“œ
 	 * @param Order
-	 * @return ¸¸µé¾îÁø Ä¿ÇÇ °¹¼ö
+	 * @return ë§Œë“¤ì–´ì§„ ì»¤í”¼ ê°¯ìˆ˜
 	 */
 	public Coffee makeAmericano(Order order) {
-		//?? ÀÌ°Ô Å¬·¡½º·Î ¸¸µé¾îÁø °´Ã¼ÀÎ°¡
-		//VO ÀÎ°¡..
+		//?? ì´ê²Œ í´ë˜ìŠ¤ë¡œ ë§Œë“¤ì–´ì§„ ê°ì²´ì¸ê°€
+		//VO ì¸ê°€..
 		coffee = new Coffee();
 		
-		//µğÆúÆ® ¸Ó±×
+		//ë””í´íŠ¸ ë¨¸ê·¸
 		coffee.setMilk(0);
 		coffee.setDefaultShotCnt(order.getShotCnt() == 2 ? this.defaultShotCnt : order.getShotCnt());
 		coffee.setWater(coffee.getWater() * 2);
 		coffee.setMenu(order.getMenu());
 
-		//??¿¹¿ÜÃ³¸® 
-		//¶ß°Å¿î ¿Âµµ¿Í ice·Î ÁÖ¹®ÇÏ°Å³ª or Â÷°¡¿î¿Âµµ¿Í hotÀ¸·Î ÁÖ¹®ÇÒ °æ¿ì ¿¹¿ÜÃ³¸®
-		//¼Õ´Ô¿¡°Ô ´Ù½Ã ¹°¾îº»´Ù
-		if("¶ß°Ì°Ô".equals(order.getTemp())&& "ice".equals(order.getHotOrIce())) {
+		//??ì˜ˆì™¸ì²˜ë¦¬ 
+		//ëœ¨ê±°ìš´ ì˜¨ë„ì™€ iceë¡œ ì£¼ë¬¸í•˜ê±°ë‚˜ or ì°¨ê°€ìš´ì˜¨ë„ì™€ hotìœ¼ë¡œ ì£¼ë¬¸í•  ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬
+		//ì†ë‹˜ì—ê²Œ ë‹¤ì‹œ ë¬¼ì–´ë³¸ë‹¤
+		if("ëœ¨ê²ê²Œ".equals(order.getTemp())&& "ice".equals(order.getHotOrIce())) {
 			
 		}
 		
@@ -63,9 +63,9 @@ class Coffee {
 	}
 	
 	/**
-	 * ¶ó¶¼ ¸¸µå´Â ¸Ş¼Òµå
+	 * ë¼ë–¼ ë§Œë“œëŠ” ë©”ì†Œë“œ
 	 * @param shotCnt
-	 * @return ¸¸µé¾îÁø Ä¿ÇÇ °¹¼ö
+	 * @return ë§Œë“¤ì–´ì§„ ì»¤í”¼ ê°¯ìˆ˜
 	 */
 	public Coffee makeLatte(int shotCnt, String iceOrHot) {
 		
@@ -75,9 +75,9 @@ class Coffee {
 
 	
 	/**
-	 * ¶ó¶¼ ¸¸µå´Â ¸Ş¼Òµå
+	 * ë¼ë–¼ ë§Œë“œëŠ” ë©”ì†Œë“œ
 	 * @param Order
-	 * @return ¸¸µé¾îÁø Ä¿ÇÇ °¹¼ö
+	 * @return ë§Œë“¤ì–´ì§„ ì»¤í”¼ ê°¯ìˆ˜
 	 */
 	public Coffee makeLatte(Order order) {
 		
