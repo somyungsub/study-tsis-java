@@ -1,7 +1,7 @@
-package practice.oop.bank02;
+package  oop.bank02;
 
-import practice.oop.bank01.Account;
-import practice.oop.bank02.card.Card;
+import  oop.bank01.Account;
+import  oop.bank02.card.Card;
 
 import java.util.List;
 

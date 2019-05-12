@@ -1,6 +1,6 @@
-package practice.oop.bank02.account;
+package  oop.bank02.account;
 
-import practice.oop.bank02.Customer;
+import  oop.bank02.Customer;
 
 public class DepositAccount implements Account {
     @Override

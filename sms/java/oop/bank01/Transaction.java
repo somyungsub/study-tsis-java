@@ -1,4 +1,4 @@
-package practice.oop.bank01;
+package oop.bank01;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

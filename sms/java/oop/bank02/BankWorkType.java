@@ -1,10 +1,10 @@
-package practice.oop.bank02;
+package oop.bank02;
 
-import practice.oop.bank02.account.DepositAccount;
-import practice.oop.bank02.account.LoanAccount;
-import practice.oop.bank02.account.SavingAccount;
-import practice.oop.bank02.card.CheckCard;
-import practice.oop.bank02.card.CreditCard;
+import  oop.bank02.account.DepositAccount;
+import  oop.bank02.account.LoanAccount;
+import  oop.bank02.account.SavingAccount;
+import  oop.bank02.card.CheckCard;
+import  oop.bank02.card.CreditCard;
 
 public enum BankWorkType {
     BANK_WORK{

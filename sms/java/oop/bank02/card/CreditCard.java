@@ -1,7 +1,7 @@
-package practice.oop.bank02.card;
+package  oop.bank02.card;
 
 
-import practice.oop.bank02.Customer;
+import  oop.bank02.Customer;
 
 public class CreditCard extends Card {
 

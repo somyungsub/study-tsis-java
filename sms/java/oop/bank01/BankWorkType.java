@@ -1,4 +1,4 @@
-package practice.oop.bank01;
+package oop.bank01;
 
 public enum BankWorkType {
     ADD_ACCOUNT,

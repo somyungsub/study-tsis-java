@@ -1,4 +1,4 @@
-package practice.oop1;
+package  oop1;
 
 import java.util.ArrayList;
 import java.util.List;

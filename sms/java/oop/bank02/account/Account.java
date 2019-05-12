@@ -1,7 +1,7 @@
-package practice.oop.bank02.account;
+package  oop.bank02.account;
 
-import practice.oop.bank02.BankWork;
-import practice.oop.bank02.Customer;
+import  oop.bank02.BankWork;
+import  oop.bank02.Customer;
 
 public interface Account extends BankWork {
 

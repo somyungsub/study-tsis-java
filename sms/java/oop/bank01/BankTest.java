@@ -1,4 +1,4 @@
-package practice.oop.bank01;
+package oop.bank01;
 
 import java.util.Scanner;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package practice.oop.bank02;
+package oop.bank02;
 
 import java.util.ArrayList;
 import java.util.List;
