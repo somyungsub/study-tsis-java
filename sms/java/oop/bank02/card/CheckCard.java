@@ -1,9 +1,7 @@
 package  oop.bank02.card;
 
 
-import  oop.bank02.Customer;
-
-import java.util.Scanner;
+import oop.bank02.Customer;
 
 public class CheckCard extends Card {
 

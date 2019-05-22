@@ -1,4 +1,4 @@
-package  oop1;
+package  oop.cafe;
 
 /*
     메뉴(커피) 정보
