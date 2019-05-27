@@ -24,3 +24,5 @@
 
 ## 클래스다이어그램
 
+![factory1](./factory.png)
+![factory2](./factory2.png)
