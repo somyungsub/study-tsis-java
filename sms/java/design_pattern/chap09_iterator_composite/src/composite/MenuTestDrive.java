@@ -2,6 +2,10 @@ package design_pattern.chap09_iterator_composite.src.composite;
 
 public class MenuTestDrive {
     public static void main(String[] args) {
+
+        int a = 3;
+        System.out.println("~a = " + ~a);
+
         MenuComponent pancakeHouseMenu = new Menu("팬케이크 하우스 메뉴", "아침메뉴");
         MenuComponent dinerMenu = new Menu("객체마을 식당 메뉴", "점심메뉴");
         MenuComponent cafeMenu = new Menu("카페 메뉴", "저녁메뉴");

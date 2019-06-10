@@ -22,7 +22,8 @@ public abstract class MenuComponent {
     public boolean isVegetarian() {
         throw new UnsupportedOperationException();
     }
+
     public void print() {
         throw new UnsupportedOperationException();
-    }
+    }   // 트리 구조를 형성할 내용
 }
