@@ -29,11 +29,11 @@ public class Evaluator {
         if (exp != null) {
           // 3 + 2 -> 5
           result = exp.interpret();
-          stack.push(new java.lang.Number(result));
+          stack.push(new Number(result));
         }
 
         if (isNumber(token)) {
-          stack.push(new java.lang.Number(Float.parseFloat(token)));
+          stack.push(new Number(Float.parseFloat(token)));
         }
       }
     }
