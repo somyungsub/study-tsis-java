@@ -1,4 +1,4 @@
-package design_pattern.chap10_state;
+package design_pattern.chap10_state.src;
 
 public class SoldState implements State {
 
