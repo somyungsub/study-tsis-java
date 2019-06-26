@@ -1,6 +1,6 @@
-package design_pattern.chap11_proxy;
+package design_pattern.chap11_proxy.src;
 
-import design_pattern.chap10_state.GumballMachine;
+import design_pattern.chap10_state.src.GumballMachine;
 
 public class NoQuarterState implements State {
 

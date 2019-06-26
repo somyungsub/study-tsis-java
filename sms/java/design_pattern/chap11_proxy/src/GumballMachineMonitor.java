@@ -1,4 +1,4 @@
-package design_pattern.chap11_proxy;
+package design_pattern.chap11_proxy.src;
 
 public class GumballMachineMonitor {
   GumballMachineRemote gumballMachineRemote;
