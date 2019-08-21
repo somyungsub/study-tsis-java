@@ -22,10 +22,15 @@
    2 런타임 시점의 의존관계는 컨테이너나 팩토리 같은 제3의 존재가 결정
    3 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공하면서 의존관계 형성
  - *핵심* : 설계 시점에는 모르는 두 오브젝트의 관계를 맺도록 도와주는 제 3의 존재
- - public UserDao(){
+ - public class UserDao(){
     connectionMaker = new DConnectionMaker();
    }
  - 문제점 : 런타임 시의 의존관계가 코드 속에 미리 결정되어 있음 
- - 해결안 : IoC방식으로 UserDao로부터 의존관계를 드러내는 코드를 제거하고 의존관계 설정 권한 위임
+ - 해결안 : IoC방식으로 UserDao로부터 의존관계를 드러내는 코드를 제거하고 의존관계 설정 권한 위임 =>DaoFactory 생성
+ - public class UserDao(){
+    private ConnectionMaker  connectionMaker;
+    
+    connectionMaker = new DConnectionMaker();
+   }
  
  
