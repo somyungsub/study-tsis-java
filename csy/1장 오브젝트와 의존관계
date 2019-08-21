@@ -22,7 +22,7 @@
    2 런타임 시점의 의존관계는 컨테이너나 팩토리 같은 제3의 존재가 결정
    3 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공하면서 의존관계 형성
  - *핵심* : 설계 시점에는 모르는 두 오브젝트의 관계를 맺도록 도와주는 제 3의 존재
- - public class UserDao(){
+ - public UserDao(){
     connectionMaker = new DConnectionMaker();
    }
  - 문제점 : 런타임 시의 의존관계가 코드 속에 미리 결정되어 있음 
@@ -30,7 +30,23 @@
  - public class UserDao(){
     private ConnectionMaker  connectionMaker;
     
-    connectionMaker = new DConnectionMaker();
+    public UserDao(ConnectionMaker cm){
+      this.connectionMaker = cm;
+    }
+   }
+ - DI는 사용할 오브젝트에 대한 선택과 생성 제어권을 외부로 넘기고
+ - 자신을 수동적으로 주입받은 오브젝트를 사용 : IoC 개념 
+ 
+ 3) 의존관계 검색과 주입
+  -자신이 필요로 하는 의존 오브젝트를 능동적으로 찾음
+  -메소드나 생성자를 통한 주입 대신 스스로 컨테이너에게 요청
+  - public UserDao(){
+    DaoFactory daoFactory = new DaoFactory();
+    this.connectionMaker = daoFactory.connectionMaker();
+   }
+ - public UserDao(){
+    ApplicationConfigApplicationContext c = new ApplicationConfigApplicationContext();
+    this.connectionMaker = c.getBean('connectionMaker', ConnectionMaker.class);
    }
  
  
