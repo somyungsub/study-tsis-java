@@ -2,4 +2,51 @@
 
 - 스프링 : 자바기반으로 한 기술 => 객체지향 프로그래밍이 가능
 - 오브젝트의 사이클이 어떤과정으로 단위로 만들어지는지 => 최종목적 : 오브젝트의 설계
-- 1장의 목표 : 오브젝트의 설계와 구현, 동작원리를 완벽히 이해하기 
+- 1장의 목표 : 오브젝트의 설계와 구현, 동작원리를 완벽히 이해하
+
+
+
+
+1.7 의존관계 주입(DI)
+
+1) 제어의 역전 IoC와 의존관계 주입
+ -의존관계 주입 : 오브젝트 레퍼런스를 외부로부터 제공(주입)받고 이를 통해 오브젝트와 의존관계가 만들어지는 것
+ 
+2) 런타임 의존관계 설정 
+ - 의존관계 : 항상 방향성을 부여 : A ---> B : B가 변하면 A에 영향을 미침 
+ - 인터페이스에 대해서만 의존관계 생성 -> 인터페이스와 구현클래스의 관계는 결합도가 낮다
+ - UserDao는 DConnectionMaker(구현클래스)와 의존하지 않음
+ - 의존 오브젝트 : 실제 사용대상 오브젝트 
+ - 의존관계 주입 3가지 조건
+   1 클래스모델이나 코드에는 런타임 시점의 의존관계가 드러나지 않는다 = 인터페이스에만 의좀
+   2 런타임 시점의 의존관계는 컨테이너나 팩토리 같은 제3의 존재가 결정
+   3 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공하면서 의존관계 형성
+ - *핵심* : 설계 시점에는 모르는 두 오브젝트의 관계를 맺도록 도와주는 제 3의 존재
+ - public UserDao(){
+    connectionMaker = new DConnectionMaker();
+   }
+ - 문제점 : 런타임 시의 의존관계가 코드 속에 미리 결정되어 있음 
+ - 해결안 : IoC방식으로 UserDao로부터 의존관계를 드러내는 코드를 제거하고 의존관계 설정 권한 위임 =>DaoFactory 생성
+ - public class UserDao(){
+    private ConnectionMaker  connectionMaker;
+    
+    public UserDao(ConnectionMaker cm){
+      this.connectionMaker = cm;
+    }
+   }
+ - DI는 사용할 오브젝트에 대한 선택과 생성 제어권을 외부로 넘기고
+ - 자신을 수동적으로 주입받은 오브젝트를 사용 : IoC 개념 
+ 
+ 3) 의존관계 검색과 주입
+  -자신이 필요로 하는 의존 오브젝트를 능동적으로 찾음
+  -메소드나 생성자를 통한 주입 대신 스스로 컨테이너에게 요청
+  - public UserDao(){
+    DaoFactory daoFactory = new DaoFactory();
+    this.connectionMaker = daoFactory.connectionMaker();
+   }
+ - public UserDao(){
+    ApplicationConfigApplicationContext c = new ApplicationConfigApplicationContext();
+    this.connectionMaker = c.getBean('connectionMaker', ConnectionMaker.class);
+   }
+ 
+ 
