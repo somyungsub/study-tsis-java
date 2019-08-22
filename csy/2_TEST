@@ -1,0 +1,67 @@
+UserDaoTest 다시보기
+ - 테스트의 유용성
+ 	1) 단위테스트 : 작은 단위의 코드에 대해 테스트를 수행하는 것
+		=> 설계대로 개발이 됐는지 빠르게 확인하기 위해 
+ 	2) 자동 수행 테스트 : 테스트를 하기 위한 복잡한 과정을 자동화 시켜 자주 반복할 수 있게 함
+
+ - UserDaoTest의 특징
+ 	1) main()를 통한 테스트 특징
+ 		- 쉽게 실행가능
+ 		- 테스트 대상의 오브젝트를 직접 호출해서 사용
+ 	2) 웹을 통한 테스트의 문제점
+ 		- UserDao의 동작을 확인하기 위해 서비스 계층, 비지니스 로직등을 모두 만들어 웹 서버에 배치하고 화면을 띄워 테스트해야함 -> 시간 등 비용 많이 듬
+
+ - UserDaoTest의 문제점
+ 	1)수동 확인 작업의 번거로움 
+ 	2)살행 작업의 번거로움 
+
+
+JUnit테스트로 전환
+
+public class UserDaoTest{ ----> 테스트 메소드 전환을 위해 메소드가 public 이어야하고 
+	@Test ----> @Test 어노테이션을 붙여야 함
+	public void addAndGet()	throws SQLException(){
+		ApplicationContext context = new ClassPathXmlApplicationContext('경로	');
+		UserDao dao = context.getBean();
+	}
+}
+
+검증코드 전환
+assertTate(value1, value2);
+
+개발자를 위한 테스팅 프레임워크 Junitㅌ
+ - 실행방법
+ - 테스트 결과의 일관성
+   1) 단위테스트는 동일한 결과를 보장해야한다
+   2) 예외조건을 테스트하는 방법
+    @Test(experted = EmptyResultDataAccessException.class)
+ - 포괄적인 테스트
+ - 테스트가 이끄는 개발
+ 	1) 테스트 주도 개발 : TDD : Test Driven Developement
+ 	  - 테스트 코드를 먼저 만들고 테스트를 성공하게 해주는 코드를 작성하는 방식의 개발
+ 	  - 코드를 만들어 테스트를 실행하는 그 사이의 간격이 매우 짧음 
+ 	  -
+ - 태스트 코드 개선
+  @Before
+  @After
+
+  JUnit 테스트 코드 실행순서
+  1) 테스트 클래스에서 @Test가 붙은 pulic이고 void 형이며 파라미터가 없는 테스트 메소드 검색
+  2) 테스트 클래스의 오브젝트 생성
+  3) @Before 메소드 실행
+  4) @Test 메소드 실행 
+  5) @After 메소드 실행 
+  6) 모든 테스트의 결과를 종합해서 리턴
+
+스프링 테스트 적용
+ - 테스트를 위한 애플리케이션 컨텍스트 관리
+ - DI와 테스트 
+
+학습 테스트로 배우는 스프링
+ - 학습 테스트의 장점
+ - 학습 테스트 예제
+ - 버그 테스트
+
+정리
+
+
