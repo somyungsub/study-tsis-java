@@ -48,5 +48,11 @@
     ApplicationConfigApplicationContext c = new ApplicationConfigApplicationContext();
     this.connectionMaker = c.getBean('connectionMaker', ConnectionMaker.class);
    }
+   
+   
+   
+   DB Connect
+   Mysql : Class.forName('com.mysql.jdbc.Driver").
+   oracle: Class.forName("oracle.jdbc.driver.OracleDriver");
  
  
